@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using FinalFantasy.Models;
 
-namespace FinalFantasy
+namespace FinalFantasy.Data
 {
     public class FinalFantasyDbContext : DbContext
     {

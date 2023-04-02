@@ -6,6 +6,6 @@
         public string Name { get; set; }
         public int GameId { get; set; }
         public virtual Game Game { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
     }
 }
