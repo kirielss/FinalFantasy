@@ -23,6 +23,14 @@ namespace FinalFantasy.Controllers
             return Ok(characters);
         }
 
+        [HttpGet]
+        [Route("health")]
+        public IActionResult HealthCheck()
+        {
+            var message = "isso talvez seja um teste";
+            return Ok(message);
+        }
+
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -59,7 +67,7 @@ namespace FinalFantasy.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var character = _dbContext.Characters.SingleOrDefault(c => c.Id ==id);
+            var character = _dbContext.Characters.SingleOrDefault(c => c.Id == id);
             if (character == null)
             {
                 return NotFound();
